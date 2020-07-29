@@ -2,9 +2,11 @@
 
 ## Artifact One - Device Module From Python/Flask Web Application
 
+[Artifact One - Python/Flask Web Application](https://github.com/thewickk/thewickk.github.io/tree/master/servers)
+
 ### A. Artifact Description:
 
-* This artifact is a modular piece of a Python-Flask web application used to manage and track computer inventory in a home/office setting. This artifact is one piece of a larger application that allows users, via a web interface, to update and modify a PostgreSQL database to keep track of computers, network devices, and IP address to better manage their IT infrastructure. This application was created in May of 2019.
+* This artifact is a modular piece of a Python/Flask web application used to manage and track computer inventory in a home/office setting. This artifact is one piece of a larger application that allows users, via a web interface, to update and modify a PostgreSQL database to keep track of computers, network devices, and IP address to better manage their IT infrastructure. This application was created in May of 2019.
 
 ### B. Justification of Artifact:
 
