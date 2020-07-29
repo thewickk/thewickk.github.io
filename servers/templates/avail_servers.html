@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+    {% block content %}
+    <div class="container">
+        <div class="jumbotron">
+          <h1 class="display-4">Available Servers</h1>
+          <hr class="my-4">
+        </div>
+        <div class="container servers" style="margin-bottom: 50px">
+            <br>
+            {% for server in avail %}
+                {% if server.simulator_id == None and server.id != 1000 %}
+                    <h3>{{ server.hostname }}</h3>
+                        <a class="btn btn-outline-primary btn-sm" href="{{ url_for('servers.server_info', server_id=server.id) }}" role="button">Server Info</a>
+                        <a href="{{ url_for('servers.server_info', server_id=server.id) }}"><span class="server_avail badge badge-success">Available</span></a>
+                {% else %}
+                    <h3>Currently No Available Servers</h3>
+                {% endif %}
+                <hr>
+            {% endfor %}
+        </div>
+     </div>
+
+    {% endblock content %}

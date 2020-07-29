@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="container servers" style="margin-bottom: 50px">
+            <h4 style="margin-left: 45px">Add Server</h4>
+
+            {{ form.hidden_tag() }}
+            {{ wtf.quick_form(form, button_map={'submit':'btn btn-sm btn-success'}) }}
+        </div>
+    </div>
+{% endblock %}
+

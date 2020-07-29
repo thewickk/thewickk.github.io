@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="container servers" style="margin-bottom: 50px">
+            <div class="alert alert-danger" role="alert">
+                <h4>Warning: Deleting the {{ server.hostname }} server will permanently delete the server from the database</h4>
+            </div>
+            <hr>
+            <br>
+            <form action="{{ url_for('servers.delete_server', server_id=server.id) }}" method="POST" class="remove_form">
+                <button type="submit" class="btn btn-md btn-danger">Delete Server</button>
+            </form>
+            <a href="{{ url_for('servers.server_info', server_id=server.id) }}" class="btn btn-md btn-primary">Cancel</button></a>
+        </div>
+    </div>
+{% endblock %}

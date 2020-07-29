@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="container servers" style="margin-bottom: 50px">
+            <div class="alert alert-warning" role="alert">
+                <h4>Removing {{ ip_address.address }}</h4>
+            </div>
+            <hr>
+            <br>
+                <form action="{{ url_for('servers.remove_ip_two', server_id=server.id, ip_id=ip_address.id) }}" method="POST" class="remove_form">
+                    <button type="submit" class="btn btn-outline-danger btn-sm">Remove</button>
+                </form>
+                <a  id="remove_btn" href="{{ url_for('servers.server_info', server_id=server.id) }}" class="btn btn-outline-primary btn-sm" type="button">Cancel</a>
+        </div>
+    </div>
+{% endblock %}

@@ -1,7 +1,4 @@
-# Welcome to my SNHU CS-499 ePortfolio!
-
-This is the starting point for the project. 
-
+# Chad Lewis ePortfolio For Southern Newhampshire University CS-499
 
 ## Artifact One - Device Module From Python/Flask Web Application
 

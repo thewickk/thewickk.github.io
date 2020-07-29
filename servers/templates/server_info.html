@@ -1,0 +1,118 @@
+{% extends 'layout.html' %}
+
+    {% block content %}
+    <div class="container">
+        <div class="jumbotron">
+            {% if server.id == 1000 %}
+                <h1>Hostname: {{ server.hostname }} <span class="server_avail badge badge-warning">LabDev PC Only</span></h1>
+            {% elif server.simulator_id != None %}
+                <h1>Hostname: {{ server.hostname }}</h1>
+                <h4><span class=" badge badge-danger">Currently In Use</span><a href="{{ url_for('main.sim_page', simulator_id=sim.id) }}"><span class="server_avail badge badge-danger">{{ sim.name }} </span></a></h4>
+            {% else %}
+                <h1>Hostname: {{ server.hostname }} <span class="server_avail badge badge-success">Available</span></h1>
+            {% endif %}
+          <hr class="my-4">
+        </div>
+        <div class="container servers" style="margin-bottom: 50px">
+            <br>
+            {% if server.id != 1000 %}
+
+                <h4><strong>MAC Address One:</strong><p class="server_info">{{ server.mac_addr_one }}</p></h4>
+                <!-- Assign IP Address to NIC One-->
+                {% if server.ip_addr_one != 'No Assigned IP' %}
+                    <h4><strong>IP Address One:</strong><p class="server_info"> {{ server.ip_addr_one }}</p>
+                    <a href="{{ url_for('servers.remove_ip_one', server_id=server.id, ip_id=ip_one_id.id) }}"><button type="submit" class="server_avail btn btn-outline-danger btn-sm">Remove</button></a></h4>
+                {% else %}
+                    <h4><strong>IP Address One:</strong><p class="server_info"> {{ server.ip_addr_one }}</p>
+                        {% if server.simulator_id == 1 %}
+                            <a href="{{ url_for('networks.server_seventyone_net', _anchor='e175', server_id=server.id, ip_id=ip_one_id.id) }}"><button type="submit" class="server_avail btn btn-outline-primary btn-sm">Add .71 IP</button></a>
+                        {% elif server.simulator_id == 2 %}
+                            <a href="{{ url_for('networks.server_seventyone_net', _anchor='b737', server_id=server.id, ip_id=ip_one_id.id) }}"><button type="submit" class="server_avail btn btn-outline-primary btn-sm">Add .71 IP</button></a>
+                        {% elif server.simulator_id == 3 %}
+                            <a href="{{ url_for('networks.server_seventyone_net', _anchor='s76', server_id=server.id, ip_id=ip_one_id.id) }}"><button type="submit" class="server_avail btn btn-outline-primary btn-sm">Add .71 IP</button></a>
+                        {% elif server.simulator_id == 4 %}
+                            <a href="{{ url_for('networks.server_seventyone_net', _anchor='a320', server_id=server.id, ip_id=ip_one_id.id) }}"><button type="submit" class="server_avail btn btn-outline-primary btn-sm">Add .71 IP</button></a>
+                        {% elif server.simulator_id == 5 %}
+                            <a href="{{ url_for('networks.server_seventyone_net', _anchor='b777', server_id=server.id, ip_id=ip_one_id.id) }}"><button type="submit" class="server_avail btn btn-outline-primary btn-sm">Add .71 IP</button></a>
+                        {% elif server.simulator_id == 6 %}
+                            <a href="{{ url_for('networks.server_seventyone_net', _anchor='c172', server_id=server.id, ip_id=ip_one_id.id) }}"><button type="submit" class="server_avail btn btn-outline-primary btn-sm">Add .71 IP</button></a>
+                        {% elif server.simulator_id == 7 %}
+                            <a href="{{ url_for('networks.server_seventyone_net', _anchor='mj', server_id=server.id, ip_id=ip_one_id.id) }}"><button type="submit" class="server_avail btn btn-outline-primary btn-sm">Add .71 IP</button></a>
+                        {% elif server.simulator_id == 8 %}
+                            <a href="{{ url_for('networks.server_seventyone_net', _anchor='kingair', server_id=server.id, ip_id=ip_one_id.id) }}"><button type="submit" class="server_avail btn btn-outline-primary btn-sm">Add .71 IP</button></a>
+                        {% else %}
+                            <a href="{{ url_for('networks.server_seventyone_net', server_id=server.id, ip_id=ip_one_id.id) }}"><button type="submit" class="server_avail btn btn-outline-primary btn-sm">Add .71 IP</button></a>
+                        {% endif %}
+                        <a href="{{ url_for('networks.server_seventytwo_net', server_id=server.id, ip_id=ip_one_id.id) }}"><button type="submit" class="btn btn-outline-secondary btn-sm">Add .72 IP</button></a>
+                        <a href="{{ url_for('networks.server_seventyfour_net', server_id=server.id, ip_id=ip_one_id.id) }}"><button type="submit" class="btn btn-outline-info btn-sm">Add .74 IP</button></a>
+                    </h4>
+                {% endif %}
+
+                <h4><strong>MAC Address Two:</strong><p class="server_info">{{ server.mac_addr_two }}</p></h4>
+                {% if server.ip_addr_two != 'No Assigned IP' %}
+                    <h4><strong>IP Address Two:</strong><p class="server_info"> {{ server.ip_addr_two }}</p>
+                    <a href="{{ url_for('servers.remove_ip_two', server_id=server.id, ip_id=ip_two_id.id) }}"><button type="submit" class="server_avail btn btn-outline-danger btn-sm">Remove</button></a></h4>
+                {% else %}
+                    <h4><strong>IP Address Two:</strong><p class="server_info"> {{ server.ip_addr_two }}</p>
+                        {% if server.simulator_id == 1 %}
+                            <a href="{{ url_for('networks.server_seventyone_net', _anchor='e175', server_id=server.id, ip_id=ip_two_id.id) }}"><button type="submit" class="server_avail btn btn-outline-primary btn-sm">Add .71 IP</button></a>
+                        {% elif server.simulator_id == 2 %}
+                            <a href="{{ url_for('networks.server_seventyone_net', _anchor='b737', server_id=server.id, ip_id=ip_two_id.id) }}"><button type="submit" class="server_avail btn btn-outline-primary btn-sm">Add .71 IP</button></a>
+                        {% elif server.simulator_id == 3 %}
+                            <a href="{{ url_for('networks.server_seventyone_net', _anchor='s76', server_id=server.id, ip_id=ip_two_id.id) }}"><button type="submit" class="server_avail btn btn-outline-primary btn-sm">Add .71 IP</button></a>
+                        {% elif server.simulator_id == 4 %}
+                            <a href="{{ url_for('networks.server_seventyone_net', _anchor='a320', server_id=server.id, ip_id=ip_two_id.id) }}"><button type="submit" class="server_avail btn btn-outline-primary btn-sm">Add .71 IP</button></a>
+                        {% elif server.simulator_id == 5 %}
+                            <a href="{{ url_for('networks.server_seventyone_net', _anchor='b777', server_id=server.id, ip_id=ip_two_id.id) }}"><button type="submit" class="server_avail btn btn-outline-primary btn-sm">Add .71 IP</button></a>
+                        {% elif server.simulator_id == 6 %}
+                            <a href="{{ url_for('networks.server_seventyone_net', _anchor='c172', server_id=server.id, ip_id=ip_two_id.id) }}"><button type="submit" class="server_avail btn btn-outline-primary btn-sm">Add .71 IP</button></a>
+                        {% elif server.simulator_id == 7 %}
+                            <a href="{{ url_for('networks.server_seventyone_net', _anchor='mj', server_id=server.id, ip_id=ip_two_id.id) }}"><button type="submit" class="server_avail btn btn-outline-primary btn-sm">Add .71 IP</button></a>
+                        {% elif server.simulator_id == 8 %}
+                            <a href="{{ url_for('networks.server_seventyone_net', _anchor='kingair', server_id=server.id, ip_id=ip_two_id.id) }}"><button type="submit" class="server_avail btn btn-outline-primary btn-sm">Add .71 IP</button></a>
+                        {% else %}
+                            <a href="{{ url_for('networks.server_seventyone_net', server_id=server.id, ip_id=ip_two_id.id) }}"><button type="submit" class="server_avail btn btn-outline-primary btn-sm">Add .71 IP</button></a>
+                        {% endif %}
+                        <a href="{{ url_for('networks.server_seventytwo_net', server_id=server.id, ip_id=ip_two_id.id) }}"><button type="submit" class="btn btn-outline-secondary btn-sm">Add .72 IP</button></a>
+                        <a href="{{ url_for('networks.server_seventyfour_net', server_id=server.id, ip_id=ip_two_id.id) }}"><button type="submit" class="btn btn-outline-info btn-sm">Add .74 IP</button></a>
+                    </h4>
+                {% endif %}
+
+                <h4><strong>CPU:</strong><p class="server_info">{{ server.processor }}</p></h4>
+                <h4><strong>Motherboard:</strong><p class="server_info">{{ server.motherboard }}</p></h4>
+                <h4><strong>Memory Type:</strong><p class="server_info">{{ server.memory_type }}</p></h4>
+                <h4><strong>Memory Quantity:</strong><p class="server_info">{{ server.memory_qty }}</p></h4>
+                <h4><strong>GPU One:</strong><p class="server_info">{{ server.gpu_one }}</p></h4>
+                <h4><strong>GPU Two:</strong><p class="server_info">{{ server.gpu_two }}</p></h4>
+                <h4><strong>Storage:</strong><p class="server_info">{{ server.storage }}</p></h4>
+                <h4><strong>Operating System:</strong><p class="server_info">{{ server.operating_system }}</p></h4>
+                <h4><strong>Build Date:</strong><p class="server_info">{{ server.build_date }}</p></h4>
+                <h4><strong>Upgrade Status:</strong><p class="server_info">{{ server.upgrade_status }}</p></h4>
+                {% if server.simulator_id != None %}
+                    <h4><strong>Simulator Group:</strong><p class="server_info">{{ sim.name }}</p></h4>
+                {% else %}
+                    <h4><strong>Simulator Group:</strong><p class="server_info">None</p></h4>
+                {% endif %}
+                <hr>
+            {% else %}
+                <h4><strong>CPU:</strong><p class="server_info">{{ server.processor }}</p></h4>
+                <h4><strong>Motherboard:</strong><p class="server_info">{{ server.motherboard }}</p></h4>
+                <h4><strong>Memory Type:</strong><p class="server_info">{{ server.memory_type }}</p></h4>
+                <h4><strong>Memory Quantity:</strong><p class="server_info">{{ server.memory_qty }}</p></h4>
+                <h4><strong>GPU One:</strong><p class="server_info">{{ server.gpu_one }}</p></h4>
+                <h4><strong>GPU Two:</strong><p class="server_info">{{ server.gpu_two }}</p></h4>
+                <h4><strong>Storage:</strong><p class="server_info">{{ server.storage }}</p></h4>
+                <h4><strong>Operating System:</strong><p class="server_info">{{ server.operating_system }}</p></h4>
+            {% endif %}
+                {% if server.simulator_id != None %}
+                    <form action="{{ url_for('servers.remove_server', server_id=server.id) }}" method="GET">
+                    <button type="submit" class="btn btn-outline-danger btn-sm">Remove From Simulator</button>
+                    </form>
+                {% elif server.id == 1000 %}
+                    <span class="server_avail badge badge-warning">LabDev PC Only</span>
+                {% else %}
+                    <a href="{{ url_for('servers.allocate_server', svr_id=server.id) }}"><button type="submit" class="btn btn-outline-success btn-sm">Allocate to Sim</button></a>
+                {% endif %}
+        </div>
+    </div>
+    {% endblock content %}

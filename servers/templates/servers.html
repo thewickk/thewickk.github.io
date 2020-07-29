@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+    {% block content %}
+    <div class="container">
+        <div class="jumbotron">
+          <h1 class="display-4">All CSF Servers</h1>
+          <hr>
+        </div>
+        <a class="btn btn-outline-secondary btn-sm" href="{{ url_for('servers.add_server') }}" role="button">Create New Server</a>
+        <div class="container servers" style="margin-bottom: 50px">
+            <br>
+            {% for server in servers %}
+                <h3>{{ server.hostname }}</h3>
+                {% if server.id == 1000 %}
+                    <a class="btn btn-outline-primary btn-sm" href="{{ url_for('servers.server_info', server_id=server.id) }}" role="button">Server Info</a>
+                    <span class="server_avail badge badge-warning">LabDev PC Only</span>
+                    <hr>
+                {% elif server.simulator_id != None %}
+                    <a class="btn btn-outline-primary btn-sm" href="{{ url_for('servers.server_info', server_id=server.id) }}" role="button">Server Info</a>
+                    <span class="server_avail badge badge-danger">Currently In Use</span>
+                    <hr>
+                {% else %}
+                    <a class="btn btn-outline-primary btn-sm" href="{{ url_for('servers.server_info', server_id=server.id) }}" role="button">Server Info</a>
+                    <a href="{{ url_for('servers.server_info', server_id=server.id) }}"><span class="server_avail badge badge-success">Available</span></a>
+                    <hr>
+                {% endif %}
+            {% endfor %}
+        </div>
+     </div>
+
+    {% endblock content %}
+
+
