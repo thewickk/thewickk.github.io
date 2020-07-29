@@ -1,7 +1,4 @@
-# Chad Lewis
-# Southern Newhampshire University CS-499
-# Bachelor of Science in Computer Science 
-# Concentration in Software Engineering
+# Southern Newhampshire University CS-499 ePortfolio Bachelor of Science in Computer Science Degree Program
 
 
 ## Artifact One - Device Module From Python/Flask Web Application
