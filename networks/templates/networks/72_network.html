@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container-fluid">
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-4">72 Network IPs</h1>
+            <hr class="my-4">
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="container">
+    {% for ip in ip_addresses.items %}
+        {% if ip.reserved_id == 1  and ip.device_id != None %}
+        <h4 id="E175">{{ ip.address }}
+            <span class="badge badge-secondary"><a href="{{ url_for('simulators.sim_info', sim_name='Embraer E175') }}">E175 Reserved IP</a></span>
+            <a href="{{ url_for('devices.device', device_id=ip.device_id) }}"><span class="badge badge-danger">{{ip}}</span></a>
+        </h4>
+        {% elif ip.reserved_id == 1  and ip.device_id == None%}
+        <h4>{{ ip.address }}
+            <a href="{{ url_for('simulators.sim_info', sim_name='Embraer E175') }}"><span class="badge badge-secondary"> E175 Reserved IP</span></a>
+            <a href="{{ url_for('networks.allocate_ip', ip_id=ip.id) }}"><span class="badge badge-success">IP Available</span></a>
+        </h4>
+        {% elif ip.reserved_id == 2  and ip.device_id != None %}
+        <h4 id="B737">{{ ip.address }}
+            <a href="{{ url_for('simulators.sim_info', sim_name='Boeing 737 MAX') }}"><span class="badge badge-secondary"> B737 Reserved IP</span></a>
+            <a href="{{ url_for('devices.device', device_id=ip.device_id) }}"><span class="badge badge-danger">{{ip}}</span></a>
+        </h4>
+        {% elif ip.reserved_id == 2  and ip.device_id == None%}
+        <h4>{{ ip.address }}
+            <a href="{{ url_for('simulators.sim_info', sim_name='Boeing 737 MAX') }}"><span class="badge badge-secondary"> B737 Reserved IP</span></a>
+            <a href="{{ url_for('networks.allocate_ip', ip_id=ip.id) }}"><span class="badge badge-success">IP Available</span></a>
+        </h4>
+        {% elif ip.reserved_id == 3  and ip.device_id != None %}
+        <h4 id="S76">{{ ip.address }}
+            <a href="{{ url_for('simulators.sim_info', sim_name='Sikorsky S-76') }}"><span class="badge badge-secondary"> S-76 Reserved IP</span></a>
+            <a href="{{ url_for('devices.device', device_id=ip.device_id) }}"><span class="badge badge-danger">{{ip}}</span></a>
+        </h4>
+        {% elif ip.reserved_id == 3  and ip.device_id == None%}
+        <h4>{{ ip.address }}
+            <a href="{{ url_for('simulators.sim_info', sim_name='Sikorsky S-76') }}"><span class="badge badge-secondary"> S-76 Reserved IP</span></a>
+            <a href="{{ url_for('networks.allocate_ip', ip_id=ip.id) }}"><span class="badge badge-success">IP Available</span></a>
+        </h4>
+        {% elif ip.reserved_id == 4  and ip.device_id != None %}
+        <h4 id="A320">{{ ip.address }}
+            <a href="{{ url_for('simulators.sim_info', sim_name='Airbus A320') }}"><span class="badge badge-secondary"> A320 Reserved IP</span></a>
+            <a href="{{ url_for('devices.device', device_id=ip.device_id) }}"><span class="badge badge-danger">{{ip}}</span></a>
+        </h4>
+        {% elif ip.reserved_id == 4  and ip.device_id == None%}
+        <h4>{{ ip.address }}
+            <a href="{{ url_for('simulators.sim_info', sim_name='Airbus A320') }}"><span class="badge badge-secondary"> A320 Reserved IP</span></a>
+            <a href="{{ url_for('networks.allocate_ip', ip_id=ip.id) }}"><span class="badge badge-success">IP Available</span></a>
+        </h4>
+        {% elif ip.reserved_id == 5  and ip.device_id != None %}
+        <h4 id="B777">{{ ip.address }}
+            <a href="{{ url_for('simulators.sim_info', sim_name='Boeing 777') }}"><span class="badge badge-secondary"> B777 Reserved IP</span></a>
+            <a href="{{ url_for('devices.device', device_id=ip.device_id) }}"><span class="badge badge-danger">{{ip}}</span></a>
+        </h4>
+        {% elif ip.reserved_id == 5  and ip.device_id == None%}
+        <h4>{{ ip.address }}
+            <a href="{{ url_for('simulators.sim_info', sim_name='Boeing 777') }}"><span class="badge badge-secondary"> B777 Reserved IP</span></a>
+            <a href="{{ url_for('networks.allocate_ip', ip_id=ip.id) }}"><span class="badge badge-success">IP Available</span></a>
+        </h4>
+        {% elif ip.reserved_id == 6  and ip.device_id != None %}
+        <h4 id="C172">{{ ip.address }}
+            <a href="{{ url_for('simulators.sim_info', sim_name='Redbird Cessna 172') }}"><span class="badge badge-secondary"> C172 Reserved IP</span></a>
+            <a href="{{ url_for('devices.device', device_id=ip.device_id) }}"><span class="badge badge-danger">{{ip}}</span></a>
+        </h4>
+        {% elif ip.reserved_id == 6  and ip.device_id == None%}
+        <h4>{{ ip.address }}
+            <a href="{{ url_for('simulators.sim_info', sim_name='Redbird Cessna 172') }}"><span class="badge badge-secondary"> C172 Reserved IP</span></a>
+            <a href="{{ url_for('networks.allocate_ip', ip_id=ip.id) }}"><span class="badge badge-success">IP Available</span></a>
+        </h4>
+        {% elif ip.reserved_id == 7  and ip.device_id != None %}
+        <h4 id="MJ">{{ ip.address }}
+            <a href="{{ url_for('simulators.sim_info', sim_name='Microjet') }}"><span class="badge badge-secondary"> MJ Reserved IP</span></a>
+            <a href="{{ url_for('devices.device', device_id=ip.device_id) }}"><span class="badge badge-danger">{{ip}}</span></a>
+        </h4>
+        {% elif ip.reserved_id == 7  and ip.device_id == None%}
+        <h4>{{ ip.address }}
+            <a href="{{ url_for('simulators.sim_info', sim_name='Microjet') }}"><span class="badge badge-secondary"> MJ Reserved IP</span></a>
+            <a href="{{ url_for('networks.allocate_ip', ip_id=ip.id) }}"><span class="badge badge-success">IP Available</span></a>
+        </h4>
+        {% elif ip.reserved_id == 8  and ip.device_id != None %}
+        <h4 id="KingAir">{{ ip.address }}
+            <a href="{{ url_for('simulators.sim_info', sim_name='Redbird King Air') }}"><span class="badge badge-secondary"> KingAir Reserved IP</span></a>
+            <a href="{{ url_for('devices.device', device_id=ip.device_id) }}"><span class="badge badge-danger">{{ip}}</span></a>
+        </h4>
+        {% elif ip.reserved_id == 8  and ip.device_id == None%}
+        <h4>{{ ip.address }}
+            <a href="{{ url_for('simulators.sim_info', sim_name='Redbird King Air') }}"><span class="badge badge-secondary"> KingAir Reserved IP</span></a>
+            <a href="{{ url_for('networks.allocate_ip', ip_id=ip.id) }}"><span class="badge badge-success">IP Available</span></a>
+        </h4>
+        {% elif ip.reserved_id == None  and ip.device_id != None %}
+        <h4>{{ ip.address }}
+            <a href="#"><span class="badge badge-secondary"> Unreserved IP</span></a>
+            <a href="{{ url_for('devices.device', device_id=ip.device_id) }}"><span class="badge badge-danger">{{ip}}</span></a>
+        </h4>
+        {% elif ip.reserved_id == None  and ip.device_id == None and (ip.id >= 277 and ip.id <= 306) %}
+        <h4>{{ ip.address }}
+            <span class="badge badge-info">DHCP</span>
+        </h4>
+        {% elif ip.reserved_id == None  and ip.device_id == None%}
+        <h4>{{ ip.address }}
+            <a href=""><span class="badge badge-secondary"> Unreserved IP</span></a>
+            <a href="{{ url_for('networks.allocate_ip', ip_id=ip.id) }}"><span class="badge badge-success">IP Available</span></a>
+        </h4>
+        {% else %}
+        <h4>{{ ip.address }}
+            <span class="badge badge-warning">Uncategorized IP</span>
+        </h4>
+        {% endif %}
+    {% endfor %}
+    </div>
+
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center">
+        {% for page_num in ip_addresses.iter_pages(left_edge=1, right_edge=1, left_current=4, right_current=4) %}
+          {% if page_num %}
+            {% if ip_addresses.page == page_num %}
+                <li class="page-item disabled">
+                    <a class="page-link" href="{{ url_for('networks.seventy_two_net', page=page_num) }}">{{ page_num }}</a>
+                </li>
+            {% else %}
+                <li class="page-item">
+                    <a class="page-link" href="{{ url_for('networks.seventy_two_net', page=page_num) }}">{{ page_num }}</a>
+                </li>
+            {% endif %}
+          {% else %}
+              ...
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </nav>
+</div>
+{% endblock content %}
+

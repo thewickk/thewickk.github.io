@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container-fluid">
+    <div class="jumbotron">
+      <h1 class="display-4">Network Home</h1>
+      <p class="lead">Building 201 FAA William J. Hughes Technical Center</p>
+      <hr class="my-4">
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                  <div class="card-header card-head-color">
+                    71 Network
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">View the 71 Network IP Addresses</h5>
+                    <a href="{{ url_for('networks.seventy_one_net') }}" class="btn btn-primary btn-sm">71 Net Info</a>
+                  </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                  <div class="card-header card-head-color">
+                    72 Network
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">View the 72 Network IP Addresses</h5>
+                    <a href="{{ url_for('networks.seventy_two_net') }}" class="btn btn-primary btn-sm">72 Net Info</a>
+                  </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card card-divider">
+                  <div class="card-header card-head-color">
+                    73 Network
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">View the 73 Network IP Addresses</h5>
+                    <a href="{{ url_for('networks.seventy_three_net') }}" class="btn btn-primary btn-sm">73 Net Info</a>
+                  </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card card-divider">
+                  <div class="card-header card-head-color">
+                    74 Network
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">View the 74 Network IP Addresses</h5>
+                    <a href="{{ url_for('networks.seventy_four_net') }}" class="btn btn-primary btn-sm">74 Net Info</a>
+                  </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card card-divider">
+                  <div class="card-header card-head-color">
+                    75 Network
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">View the 75 Network IP Addresses</h5>
+                    <a href="{{ url_for('networks.seventy_five_net') }}" class="btn btn-primary btn-sm">75 Net Info</a>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock content %}
+

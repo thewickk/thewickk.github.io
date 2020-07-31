@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container-fluid">
+    <div class="jumbotron">
+        <h1 class="display-4">Add IP To Server
+        </h1>
+        <hr class="my-4">
+    </div>
+</div>
+
+<div class="container-fluid">
+    <form method="POST">
+        <label>Choose Server You Would Like to Allocate {{ ip_address.address }} to:</label>
+        {{ form.hidden_tag() }}
+        {{ form.allocate_ip(class="form-control") }}
+        {{ form.submit(class="btn btn-primary btn-sm add-ip-button") }}
+    </form>
+</div>
+{% endblock content %}
