@@ -1,4 +1,6 @@
 
+# Capstone Project
+
 # Artifact One - Device Module From Python/Flask Web Application
 
 Link to Artifact One Module Code:
@@ -24,7 +26,7 @@ Link to Artifact One Module Code:
 
 # Artifact Two - Device Module From Python/Flask Web Application
 
-Link to Artifact One Module Code:
+Link to Artifact Two Code:
 
 * [Artifact Two - Linux File Scanner written in the C Programming Language](https://github.com/thewickk/thewickk.github.io/tree/master/file_scanner)
 
