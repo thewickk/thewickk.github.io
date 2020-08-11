@@ -20,7 +20,7 @@ static bool ignore_path(char *path, char*name)
     return false;
 }
 
-// recursively scan through this directroy tree
+// recursively scan through this directory tree
 bool scan_directory_tree(char *root, scan_callback scan)
 {
     assert(root != NULL);
