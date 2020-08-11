@@ -1,6 +1,15 @@
 
 # Capstone Project
 
+```bash
+I enrolled in the Computer Science degree program in January of 2018 with two goals:
+	1.	To increase my chances for employment in the Computer Science and Technologies field
+	2.	T become a well-rounded software developer
+I truly believe these goals have been accomplished. Much of the culmination of the effort I have put into achieving these goals is reflected in this ePortfolio. As you parse this document, you will find pieces of code that have real-world applications representing skills that I have gained in Southern New Hampshire University’s Computer Science degree program in Object-Oriented Programming and Modular Based Design patterns, concepts of Data Structures and Algorithms, and Database design for Web applications and RESTful APIs. 
+While earning my Bachelor of Science in Compute Science degree I have had the opportunity to work on various projects in collaborative environments using Version Control tools such as Git, EGit, GitHub, and Bitbucket where the fundamental version control skills such as pushing, pulling, merging, and resolving merge conflicts were instilled to be able to work together with many Developers on a project. While much of the focus was to become proficient in the use of version control, these projects also afforded the opportunity to learn the various communication skills necessary to communicate the needs of current and perspective Clients to the various members of a Software Development team hired to develop a software application. 
+In the following sections you will find that Artifact One acknowledges my ability to create a modular program based on Object-Oriented design principals, while Artifact Two showcases my understanding of Data Structures and Algorithms to implement logical and efficient pieces of code that can benefit a single application or be used as a stand-alone library that can be used in many programs, and finally Artifact Three highlights how the concepts of Artifact One and Two can be used in conjunction to create Databases that can be used as the backbone of a web-based application or work just as well as the backend to any software application requiring the use of a mechanism to store data. In each of these Artifacts, the principles of secure coding have been implemented to ensure that the code minimizes the risk to security exploits, programming best practices have been followed so the code is written in such a way that the underlying functionality should be apparent to Developer who may need to contribute, edit, or enhance this code, and the standards of the various programming languages have been followed to conform with that languages requirements to contribute to the Open-Source community.
+```
+
 # Artifact One - Device Module From Python/Flask Web Application
 
 Link to Artifact One Module Code:
