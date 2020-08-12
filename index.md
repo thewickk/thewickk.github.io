@@ -5,9 +5,9 @@
 
 * I enrolled in the Computer Science degree program in January of 2018 with two goals:
 
-
   * **To increase my chances for employment in the Computer Science and Technologies field**
-  * **To become a well-rounded software developer**&nbsp;
+  * **To become a well-rounded software developer**
+  
   
 * I truly believe these goals have been accomplished. Much of the culmination of the effort I have put into achieving these goals is reflected in this ePortfolio. As you parse this document, you will find pieces of code that have real-world applications representing skills that I have gained in Southern New Hampshire University’s Computer Science degree program. The artifacts in this document highlight my understanding of Object-Oriented Programming and Modular Based Design patterns, concepts of Data Structures and Algorithms, and Database design for Web applications and RESTful APIs. 
 
