@@ -5,10 +5,10 @@
 
 * I enrolled in the Computer Science degree program in January of 2018 with two goals:
 
-```
-1. To increase my chances for employment in the Computer Science and Technologies field
-2. To become a well-rounded software developer
-```
+
+    1. **To increase my chances for employment in the Computer Science and Technologies field**
+    2. **To become a well-rounded software developer**
+
 
 * I truly believe these goals have been accomplished. Much of the culmination of the effort I have put into achieving these goals is reflected in this ePortfolio. As you parse this document, you will find pieces of code that have real-world applications representing skills that I have gained in Southern New Hampshire University’s Computer Science degree program. The artifacts in this document highlight my understanding of Object-Oriented Programming and Modular Based Design patterns, concepts of Data Structures and Algorithms, and Database design for Web applications and RESTful APIs. 
 
@@ -20,9 +20,9 @@
 
 # Artifact One (Software Design and Engineering) - Python/Flask Web Application Module
 
-Link to Artifact One Code:
+**Link to Artifact One Code:**
 
-* [Artifact One - Python/Flask Web Application](https://github.com/thewickk/thewickk.github.io/tree/master/servers)
+* **[Artifact One - Python/Flask Web Application](https://github.com/thewickk/thewickk.github.io/tree/master/servers)**
 
 ## Artifact One Description:
 
@@ -43,9 +43,9 @@ Link to Artifact One Code:
 
 # Artifact Two (Data Structures and Algorithms) - Linux File Scanner written in the C Programming Language
 
-Link to Artifact Two Code:
+**Link to Artifact Two Code:**
 
-* [Artifact Two - Linux File Scanner written in the C Programming Language](https://github.com/thewickk/thewickk.github.io/tree/master/file_scanner)
+* **[Artifact Two - Linux File Scanner written in the C Programming Language](https://github.com/thewickk/thewickk.github.io/tree/master/file_scanner)**
 
 ## Artifact Two Description:
 
@@ -61,9 +61,9 @@ Link to Artifact Two Code:
 
 # Artifact Three (Databases) - PostgreSQL, SQLAlchemy, and Flask
 
-Link to Artifact Two Code:
+**Link to Artifact Two Code:**
 
-* [Artifact Three - PostgreSQL, SQLAlchemy, and Flask](https://github.com/thewickk/thewickk.github.io/tree/master/networks)
+* **[Artifact Three - PostgreSQL, SQLAlchemy, and Flask](https://github.com/thewickk/thewickk.github.io/tree/master/networks)**
 
 ## Artifact Three Description:
 
@@ -80,4 +80,4 @@ Link to Artifact Two Code:
 
 ## Reflection on Artifact Three:
 
-* I was a bit disappointed that I was not able to convert the database to MongoDB, but in the process, I was able to get a good refresher on using MongoDB, PostgreSQL, Flask, and SQLAlchemy. It is always difficult for me to revisit old code that has not been touched in a while. It is funny how something you originally spent so much time and effort on, where at one point you knew it like the back of your hand, can become so foreign and confusing because it has been stable for so long there hasn’t been a need to revisit it. After some considerable effort of going through the program, understanding comes back relatively quickly and in a way you time travel back to a place when developing the application was a new and experience. 
+* It is always difficult for me to revisit old code that has not been touched in a while. It is funny how something you originally spent so much time and effort on, where at one point you knew it like the back of your hand, can become so foreign and confusing because it has been stable for so long there hasn’t been a need to revisit it. After some considerable effort of going through the program, understanding comes back relatively quickly and in a way you time travel back to a place when developing the application was a new and experience. 
