@@ -7,9 +7,9 @@
 
 
     1. **To increase my chances for employment in the Computer Science and Technologies field**
-    2. **To become a well-rounded software developer**
-
-
+    2. **To become a well-rounded software developer**     
+    
+</br>
 * I truly believe these goals have been accomplished. Much of the culmination of the effort I have put into achieving these goals is reflected in this ePortfolio. As you parse this document, you will find pieces of code that have real-world applications representing skills that I have gained in Southern New Hampshire University’s Computer Science degree program. The artifacts in this document highlight my understanding of Object-Oriented Programming and Modular Based Design patterns, concepts of Data Structures and Algorithms, and Database design for Web applications and RESTful APIs. 
 
 * While earning my Bachelor of Science in Computer Science degree I have had the opportunity to work on various projects in collaborative environments using Version Control tools such as Git, EGit, GitHub, and Bitbucket where the fundamental version control skills such as pushing, pulling, merging, and resolving merge conflicts were instilled to be able to work together with many Developers on a project. While much of the focus was to become proficient in the use of version control, these projects also afforded the opportunity to learn the various communication skills necessary to communicate the needs of current and perspective clients to the various members of a Software Development team hired to develop a software application. 
